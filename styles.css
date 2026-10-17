@@ -1,0 +1,435 @@
+.logo {width: 100px; height: 100px; object-fit: contain; border-radius: 12px;}
+body {font-family: "Roboto", sans-serif;}
+
+header h1 
+{font-size: 35px; 
+ letter-spacing: 5px;
+ color: #0094ff;
+ transform:translate(100px, -97px);
+}
+header p
+{
+ font-size: 25px;
+ font-weight: bold;
+ letter-spacing: 0px;
+ color:black;
+ transform:translate(18px, -90px);
+}
+nav { display: flex; gap: 15px; }
+nav a
+{ 
+    width: 100px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:transparent;
+    border: 1px solid #0094ff;
+    border-radius: 15px;
+    box-sizing: border-box;
+    text-decoration: none;
+    color:#0094ff;
+    font-size: 12px; 
+    letter-spacing: 1px; 
+    transform:translate(400px, -210px);
+}
+#Instructions
+{
+    color:black;
+    letter-spacing: 0px;
+}
+#Instructions h2
+{
+    font-weight:500;
+    transform:translate(20px, -130px);
+}
+#Instructions p
+{
+    display: flex;
+    gap: 15px;
+    width: 300px;
+    height: 30px;
+    padding-left: 10px;
+    justify-content: left;
+    align-items: center;
+    background-color: transparent;
+    border: 1px solid #000;
+    box-sizing: border-box;
+    text-decoration: none;
+    border-radius: 15px;
+    font-weight:450;
+    font-size: 40;
+    transform:translate(20px, -130px);
+}
+
+#searchform
+{
+    width: 350px;
+    padding: 25px;
+    font-weight: 450;
+    transform:translate(400px, -350px);
+}
+#searchform > label
+{
+    font-size: 45;
+    font-weight: 500;
+}
+#searchform input
+{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px;
+    margin-left: -5px;
+    margin-top: 5px;
+    background: transparent;
+    border: 2px solid #0094ff;
+    border-radius: 15px;
+}
+#searchform .yearoption
+{
+    transform:translate(355px, -74px);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+#searchform .yearoption select
+{
+    width: 50%;
+    height: 50px;
+    padding: 10px;
+    margin-left: -5px;
+    margin-top: 5px;
+    background: transparent;
+    border: 2px solid #0094ff;
+    border-radius: 15px;
+}
+button
+{
+    width: 200px;
+    border-radius: 15px;
+    border-color:transparent;
+    color: white;
+    background-color:#0094ff;
+    padding: 15px;
+    font-size: 75;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transform:translate(-5px, -68px);
+}
+#resultsection 
+{
+    margin-top: 10px;
+    transform:translate(80px, -390px);
+}
+#resultsection h2
+{
+    color:#0094ff;
+}
+#resultsection p
+{
+    transform:translate(-37px, -20px);
+}
+.research-result {
+    display: flex;
+    flex-direction:column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 10px;
+    width: 100%;
+    padding: 15px 20px;
+    border-color:transparent;
+    margin-top: -10px;
+    min-width: 0;
+}
+.research-year {
+    font-size: 18px;
+    color: black;
+    margin-left: 18px;
+    font-weight: 450;
+}
+.research-title {
+    margin-left: -20px;
+    margin-top: -30px;
+    font-size: 20px;
+    font-weight: 430;
+    color: #111;
+}
+.research-pdf {
+    flex-shrink: 0;
+    display: inline-block;
+    padding: 10px 16px;
+    background: #0099ff;
+    color: white;
+    border-radius: 12px;
+    text-decoration: none;
+    white-space: nowrap;
+    transform:translate(-23px, -68px);
+    align-self:flex-start;
+}
+.research-source {
+    display: inline-flex;
+    line-height: 1;
+    padding: 10px 16px;
+    background: transparent;
+    color: #0099ff;
+    border: 2px solid #0099ff;
+    border-radius: 15px;
+    align-self: flex-start;
+    height: 14px;
+    transform:translate(120px, -19px);
+    justify-content:center;
+    align-items:center;
+    text-decoration:none;
+}
+
+/* ==============================
+   MOBILE RESPONSIVE LAYOUT
+   ============================== */
+
+@media screen and (max-width: 768px) {
+
+    /* Prevent horizontal scrolling */
+    * {
+        box-sizing: border-box;
+    }
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: clip;
+    }
+
+    body {
+        padding: 16px;
+    }
+
+    /* HEADER */
+    header {
+        display: grid;
+        grid-template-columns: 65px minmax(0, 1fr);
+        align-items: center;
+        column-gap: 12px;
+        width: 100%;
+    }
+
+    .logo {
+        width: 65px;
+        height: 65px;
+        grid-row: 1 / 3;
+    }
+
+    header h1 {
+        font-size: clamp(21px, 6vw, 30px);
+        letter-spacing: 2px;
+        margin: 0;
+        transform: none;
+        overflow-wrap: anywhere;
+    }
+
+    header p {
+        font-size: 13px;
+        margin: 5px 0 0;
+        transform: none;
+        overflow-wrap: anywhere;
+    }
+
+    /* NAVIGATION */
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin: 20px 0 28px;
+        transform: none;
+    }
+
+    nav a {
+        width: auto;
+        min-width: 80px;
+        height: 34px;
+        padding: 0 12px;
+        font-size: 11px;
+        letter-spacing: 0;
+        transform: none;
+    }
+
+    /* MAIN CONTENT */
+    main {
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+        width: 100%;
+        min-width: 0;
+    }
+
+    /* INSTRUCTIONS */
+    #Instructions {
+        width: 100%;
+        margin: 0;
+        transform: none;
+    }
+
+    #Instructions h2 {
+        margin: 0 0 12px;
+        transform: none;
+        font-size: 23px;
+    }
+
+    #Instructions p {
+        width: 100%;
+        max-width: 100%;
+        min-height: 42px;
+        height: auto;
+        padding: 10px 12px;
+        margin: 8px 0;
+        font-size: 13px;
+        line-height: 1.4;
+        transform: none;
+    }
+
+    /* SEARCH FORM */
+    #searchform {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+        margin: 0;
+        transform: none;
+    }
+
+    #searchform > label,
+    #searchform .yearoption label {
+        font-size: 15px;
+        font-weight: 500;
+    }
+
+    #searchform input {
+        width: 100%;
+        min-width: 0;
+        padding: 14px;
+        margin: 0;
+        font-size: 16px;
+        transform: none;
+    }
+
+    #searchform .yearoption {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        width: 100%;
+        margin: 8px 0;
+        transform: none;
+    }
+
+    #searchform .yearoption select {
+        width: 100%;
+        height: 46px;
+        padding: 10px;
+        margin: 0;
+        font-size: 16px;
+        transform: none;
+    }
+
+    #searchform button {
+        width: 100%;
+        min-height: 48px;
+        padding: 12px;
+        margin: 0;
+        font-size: 14px;
+        transform: none;
+    }
+
+    /* SEARCH RESULTS SECTION */
+    #resultsection {
+        width: 100%;
+        min-width: 0;
+        margin: 0;
+        transform: none;
+    }
+
+    #resultsection h2 {
+        font-size: 23px;
+        margin: 0 0 16px;
+    }
+
+    #results {
+        width: 100%;
+        min-width: 0;
+        overflow-wrap: anywhere;
+    }
+
+    #results > p {
+        margin: 0;
+        transform: none;
+    }
+
+    /* INDIVIDUAL RESEARCH RESULTS */
+    .research-result {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+
+        width: 100%;
+        min-width: 0;
+        padding: 12px 0;
+        margin: 0 0 20px;
+        transform: none;
+    }
+
+    .research-year {
+        margin: 0;
+        font-size: 14px;
+        transform: none;
+    }
+
+    .research-title {
+        max-width: 100%;
+        margin: 0;
+        font-size: 17px;
+        line-height: 1.5;
+        overflow-wrap: anywhere;
+        transform: none;
+    }
+
+    .research-pdf {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+
+        max-width: 100%;
+        padding: 12px 16px;
+        margin: 0;
+        font-size: 13px;
+        white-space: normal;
+        text-align: center;
+
+        align-self: flex-start;
+        transform: none;
+    }
+
+    .research-source {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+
+        max-width: 100%;
+        height: auto;
+        min-height: 40px;
+        padding: 10px 16px;
+        margin: 0;
+        font-size: 13px;
+        white-space: normal;
+        text-align: center;
+
+        align-self: flex-start;
+        transform: none;
+    }
+}

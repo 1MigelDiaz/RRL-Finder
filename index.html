@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700%display=swap" rel="stylesheet">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>RRL Search automation</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+        <header>
+            <img src="rrllogo.png" alt="Chimmy cracks" class="logo">
+            <h1>RRL Finder</h1>
+            <p>Look for simillar research for free</p>
+        </header>
+        <nav>
+            <a class="email" href="miggy.diaz2009@gmail.com">E-mail</a>
+            <a class="github" href="https://github.com/1MigelDiaz">Github</a>
+            <a class="facebook" href="https://www.facebook.com/juan.miguel.diaz.694629">Facebook</a>
+        </nav>
+
+        <main>
+            <section id="Instructions">
+                <h2>Instructions</h2>
+                <p>1. Copy your desired research topic. </p>
+                <p>2. Paste it on the placeholder. </p>
+                <p>3. Add publication recency if needed. </p>
+                </section>
+
+                <form id="searchform">
+                    <label for="researchinput">Research Topic</label>
+                    <input 
+                    type="text"
+                    id="researchinput"
+                    name="research"
+                    placeholder="e.g., Water Hyacinth" required>
+                    <div class="yearoption">
+                    <label for="minYear">Minimmum recency</label>
+                    <select id="minYear" name="minYear">
+                        <option value = "">Any year</option>
+                        <option value = "2026">2026+</option>
+                        <option value = "2025">2025+</option>
+                        <option value = "2024">2024+</option>
+                        <option value = "2023">2023+</option>
+                        <option value = "2022">2022+</option>
+                        <option value = "2021">2021+</option>
+                        <option value = "2020">2020+</option>
+                        <option value = "2019">2019+</option>
+                        <option value = "2018">2018+</option>
+                        <option value = "2017">2017+</option>
+                        <option value = "2016">2016+</option>
+                        <option value = "2015">2015+</option>
+                        <option value = "2014">2014+</option>
+                        <option value = "2013">2013+</option>
+                        <option value = "2012">2012+</option>
+                        <option value = "2011">2011+</option>
+                        <option value = "2010">2010+</option>
+                        <option value = "2009">2009+</option>
+                        <option value = "2008">2008+</option>
+                        <option value = "2007">2007+</option>
+                    </select>
+                    </div>
+                    <button type="submit"> Search for RRL </button>
+                </form>
+
+            <section id="resultsection">
+            <h2>Search results</h2>
+            <div id="results">
+                <p> Matching research will appear here. </p>
+            </div>
+            </section>
+        </main>
+        <script src="script.js"></script>
+    </body>
+
+</html>
