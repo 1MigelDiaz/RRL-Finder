@@ -376,16 +376,16 @@ button
         flex-direction: column;
         align-items: flex-start;
         gap: 10px;
-
         width: 100%;
         min-width: 0;
         padding: 12px 0;
-        margin: 0 0 20px;
+        margin: 0 0 -20px;
+        margin-top: -40px;
         transform: none;
     }
 
     .research-year {
-        margin: 0;
+        margin: 40px;
         font-size: 14px;
         transform: none;
     }
@@ -393,6 +393,8 @@ button
     .research-title {
         max-width: 100%;
         margin: 0;
+        margin-top: -60px;
+        margin-left: 3px;
         font-size: 17px;
         line-height: 1.5;
         overflow-wrap: anywhere;
@@ -412,7 +414,7 @@ button
         text-align: center;
 
         align-self: flex-start;
-        transform: none;
+        transform:translate(95px, -50px);
     }
 
     .research-source {
